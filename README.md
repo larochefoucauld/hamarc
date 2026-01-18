@@ -17,7 +17,7 @@ Meta:
     [<Meta><file content><ctl for file content>]+
 
 ```
-(here, `ctl` refers to control bits).
+(here `ctl` refers to control bits).
 
 ## Usage
 ### Build and run
@@ -54,4 +54,4 @@ $ build/hamarc_tests
 [==========] 21 tests from 4 test suites ran. (153 ms total)
 [  PASSED  ] 21 tests.
 ```
-This test suite tests archiver components against manually processed examples, which include error correction.
+This test suite tests archiver components against manually processed examples, which include error correction checking.

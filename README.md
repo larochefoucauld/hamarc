@@ -6,14 +6,14 @@ The project also includes my self-written `argparser` library to take command-li
 > This project was completed as part of my undergraduate C++ course. Also, it is my first-year project, so the code might need some refactoring.
 
 ## Archive format
-An archiver uses `.ham` binary file format to store multiple items added to the archive. It stores file metadata (such as its name, size and encoding block size) protected by control bits and file content. Files are stored consecutively: first metadata, then file content and then all control bits associated with content blocks. `.ham` file is required to be non-empty, i. e. contain at least one file (which may be empty). The precise scheme is as follows:
+An archiver uses `.haf` (Hamming Archive Format) binary file format to store multiple items added to the archive. It stores file metadata (such as its name, size and encoding block size) protected by control bits and file content. Files are stored consecutively: first metadata, then file content and then all control bits associated with content blocks. `.haf` file is required to be non-empty, i. e. contain at least one file (which may be empty). The precise scheme is as follows:
 
 ```
 Meta: 
     <4 bytes: file name size in bytes><8 bytes: file content size in bytes>
     <8 bytes: block size in bytes><ctl><file name><ctl for file name>
 
-.ham:
+.haf:
     [<Meta><file content><ctl for file content>]+
 
 ```
